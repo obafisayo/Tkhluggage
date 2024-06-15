@@ -1,0 +1,38 @@
+import styled from "styled-components";
+import Container from "../../../components/container/Container";
+import Nav from "../nav/Nav";
+import CompanyLogo from "../../../components/companyLogo/CompanyLogo";
+import SearchBar from "../../../components/searchBar/SearchBar";
+import DarkMode from "../../../components/darkMode/DarkMode";
+import CartButton from "../../../components/cartButton/CartButton";
+import Hamburger from "../../../components/hamburger/Hamburger";
+
+function Header() {
+    return (
+        <StyledHeader className="bg-white dark:bg-gray-900 
+        dark:text-white duration-200 relativez z-40">
+            <div className="py-4">
+                <Container classname={"flex justify-between items-center"}>
+                    <div className="flex items-center gap-4">
+                        <CompanyLogo
+                            classname={"h-auto w-48 dark:fill-blue-600"}
+                            text="TKHLUGGAGE"
+                        />
+                        <Nav />
+                    </div>
+                    <div className="flex justify-between items-center gap-4">
+                        <SearchBar />
+                        <CartButton />
+                        <DarkMode />
+                        <Hamburger />
+                    </div>
+                </Container>
+            </div>
+        </StyledHeader>
+    );
+}
+
+const StyledHeader = styled.header`
+`;
+
+export default Header;
